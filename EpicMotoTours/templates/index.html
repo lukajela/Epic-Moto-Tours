@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Moto Tours - Avanturistične ture</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Epic Moto Tours Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Domov</a></li>
+                <li><a href="/ture">Ture</a></li>
+                <li><a href="/prijava">Prijava</a></li>
+                <li><a href="/kontakt" class="btn">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Odkrij svobodo z Epic Moto Tours</h1>
+        <p>Live the Ride. Explore the Epic.</p>
+        <a href="/ture" class="btn">Oglej si ture</a>
+    </section>
+
+    <section class="galerija">
+        <h2>Naši trenutki s tur</h2>
+        <div class="galerija-grid">
+            <img src="{{ url_for('static', filename='images/galerija1.jpg') }}" alt="Slika 1">
+            <img src="{{ url_for('static', filename='images/galerija2.jpg') }}" alt="Slika 2">
+            <img src="{{ url_for('static', filename='images/galerija3.jpg') }}" alt="Slika 3">
+            <img src="{{ url_for('static', filename='images/galerija4.jpg') }}" alt="Slika 4">
+            <img src="{{ url_for('static', filename='images/galerija5.jpg') }}" alt="Slika 5">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Epic Moto Tours | Kontakt: epicmototours@gmail.com</p>
+    </footer>
+</body>
+</html>
