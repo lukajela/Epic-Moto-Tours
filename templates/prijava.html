@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prijava | Epic Moto Tours</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="{{ url_for('static', filename='images/logo.PNG') }}" alt="Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/">Domov</a></li>
+      <li class="dropdown">
+        <a href="#">Ture <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-content">
+          <li><a href="/ture#balkanska">Balkanska</a></li>
+          <li><a href="/ture#alpska">Alpska</a></li>
+          <li><a href="/ture#jadranska">Jadranska</a></li>
+        </ul>
+      </li>
+      <li><a href="/prijava" class="btn">Prijava</a></li>
+      <li><a href="/kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="form-container">
+  <h2>Prijava na turo</h2>
+  <form method="POST">
+    <label for="ime">Ime in priimek:</label>
+    <input type="text" name="ime" required>
+
+    <label for="email">E-pošta:</label>
+    <input type="email" name="email" required>
+
+    <label for="telefon">Telefon:</label>
+    <input type="tel" name="telefon" required>
+
+    <label for="tura">Izberi turo:</label>
+    <select name="tura" required>
+      <option>Alpska avantura</option>
+      <option>Balkanska ekspedicija</option>
+      <option>Jadranska obala</option>
+    </select>
+
+    <button type="submit" class="btn">Pošlji prijavo</button>
+  </form>
+</section>
+
+<footer>
+  <div class="footer-icons">
+    <a href="https://instagram.com/epic_moto_tours" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com/Epic_moto_tours" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://youtube.com/@Epic_moto_tours" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+  <p>Kontakt: mototoursepic@gmail.com</p>
+  <p>&copy; 2025 Epic Moto Tours</p>
+</footer>
+
+</body>
+</html>
